@@ -1,0 +1,15 @@
+--Run KUBERNETES
+(.devops) voclabs:~/environment/proj4/project-ml-microservice-kubernetes (master) $ ./run_kubernetes.sh
+Error from server (AlreadyExists): pods "veerms" already exists
+NAME     READY   STATUS    RESTARTS   AGE
+veerms   1/1     Running   0          75s
+
+--Make Predictions 
+
+(.devops) voclabs:~/environment/proj4/project-ml-microservice-kubernetes (master) $ ./make_prediction.sh
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
