@@ -48,3 +48,12 @@ source .devops/bin/activate
 * Setup and Configure Kubernetes locally
 * Create Flask app in Container
 * Run via kubectl
+
+#### Various code Files used for this project as below 
+•	app.py -   It’s an application file.
+•	run_docker.sh - Create docker image and start application.
+•	upload_docker.sh - Upload docker image to docker repo
+•	run_kubernetes.sh - Download docker image to Kubernetes and start application.
+•	make_prediction.sh- To make predictions. 
+
+
