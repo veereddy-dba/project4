@@ -44,19 +44,25 @@ i. Standalone:
 ii. Run in Docker:
 
    Run ./run_docker.sh to containerize the application to docker container.
+   
    Run ./make_prediction.sh to test the predict API on local.
 
 iii. Run in Kubernetes:
 
    Run ./upload_docker.sh to push the docker image into docker hub.
+   
    Run minikube start to start the local kubernetes cluster.
+   
    Run kubectl config view to view the kubernetes default configurations and verify that the cluster is with a certificate-authority and server.
+   
    Run ./run_kubernetes.sh when the pod is in [Running] state.
+   
    Run ./make_prediction.sh while calling ./run_kubernetes.sh.
 
 iv. Clean up kubernetes cluster:
    
    Run minikube delete.
+   
    Run minikube stop.
 
 
