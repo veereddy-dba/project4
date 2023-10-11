@@ -1,12 +1,13 @@
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/veereddy-dba/project4/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/veereddy-dba/project4/tree/main)
 
-**** Project Overview ****
+                                                                    **** Project Overview ****
+                                                                    
 
 In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
 
 You are given a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. You can read more about the data, which was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). This project tests your ability to operationalize a Python flask app—in a provided file, `app.py`—that serves out predictions (inference) about housing prices through API calls. This project could be extended to any pre-trained machine learning model, such as those for image recognition and data labeling.
 
- 1. Project Tasks
+ 1. Project Tasks are
 
 Your project goal is to operationalize this working, machine learning microservice using [kubernetes](https://kubernetes.io/), which is an open-source system for automating the management of containerized applications. In this project you will:
 * Test your project code using linting
@@ -19,7 +20,8 @@ Your project goal is to operationalize this working, machine learning microservi
 
 You can find a detailed [project rubric, here](https://review.udacity.com/#!/rubrics/2576/view).
 
-**The final implementation of the project will showcase your abilities to operationalize production microservices.**
+**The final implementation of the project will showcase your abilities to operationalize production microservices**
+
 
 2. Setup the Environment
 
@@ -33,40 +35,25 @@ python3 -m pip install --user virtualenv
 python3 -m virtualenv .devops
 source .devops/bin/activate
 ```
-* Run `make install` to install the necessary dependencies
+* Run `make install`  //To install the necessary dependencies
 
 3. Running application
 
-i. Standalone: 
+i.Standalone:
+Run python app.py
 
-   Run payton `app.py`
+ii.Run in Docker:
+Run ./run_docker.sh        // To containerize the application to docker container.
+Run ./make_prediction.sh   // To test the predict API on local.
 
-ii. Run in Docker:
-
-   Run ./run_docker.sh to containerize the application to docker container.
-   
-   Run ./make_prediction.sh to test the predict API on local.
-
-iii. Run in Kubernetes:
-
-   Run ./upload_docker.sh to push the docker image into docker hub.
-   
-   Run minikube start to start the local kubernetes cluster.
-   
-   Run kubectl config view to view the kubernetes default configurations and verify that the cluster is with a certificate-authority and server.
-   
-   Run ./run_kubernetes.sh when the pod is in [Running] state.
-   
-   Run ./make_prediction.sh while calling ./run_kubernetes.sh.
-
-iv. Clean up kubernetes cluster:
-   
-   Run minikube delete.
-   
-   Run minikube stop.
+iii.Run in Kubernetes:
+Run ./upload_docker.sh        //To push the docker image into docker hub.
+Run minikube start            //To start the local kubernetes cluster.
+Run kubectl config view      //To view the kubernetes default configurations and verify that the cluster is with a certificate-authority and server.
+Run ./run_kubernetes.sh      // When the pod is in [Running] state .
+Run ./make_prediction.sh    // While calling ./run_kubernetes.sh . 
 
 
-
-
-
-
+iv. Clean up kubernetes cluster
+Run minikube delete
+Run minikube stop
