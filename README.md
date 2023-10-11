@@ -52,6 +52,7 @@ source .devops/bin/activate
    Run ./make_prediction.sh while calling ./run_kubernetes.sh
 
 4. Clean up kubernetes cluster
+   
    Run minikube delete
    Run minikube stop
 
