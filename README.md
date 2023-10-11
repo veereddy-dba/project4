@@ -1,6 +1,6 @@
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/veereddy-dba/project4/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/veereddy-dba/project4/tree/main)
 
- ** Project Overview **
+**** Project Overview ****
 
 In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
 
@@ -37,21 +37,24 @@ source .devops/bin/activate
 
 3. Running application
 
-1. Standalone: 
+i. Standalone: 
+
    Run payton `app.py`
 
-2. Run in Docker:
+ii. Run in Docker:
+
    Run ./run_docker.sh to containerize the application to docker container.
    Run ./make_prediction.sh to test the predict API on local.
 
-3. Run in Kubernetes:
+iii. Run in Kubernetes:
+
    Run ./upload_docker.sh to push the docker image into docker hub.
    Run minikube start to start the local kubernetes cluster
    Run kubectl config view to view the kubernetes default configurations and verify that the cluster is with a certificate-authority and server.
    Run ./run_kubernetes.sh when the pod is in [Running] state
    Run ./make_prediction.sh while calling ./run_kubernetes.sh
 
-4. Clean up kubernetes cluster
+iv. Clean up kubernetes cluster:
    
    Run minikube delete
    Run minikube stop
