@@ -1,12 +1,12 @@
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/veereddy-dba/project4/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/veereddy-dba/project4/tree/main)
 
-## Project Overview
+I.Project Overview
 
 In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
 
 You are given a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. You can read more about the data, which was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). This project tests your ability to operationalize a Python flask app—in a provided file, `app.py`—that serves out predictions (inference) about housing prices through API calls. This project could be extended to any pre-trained machine learning model, such as those for image recognition and data labeling.
 
-### Project Tasks
+ -- Project Tasks
 
 Your project goal is to operationalize this working, machine learning microservice using [kubernetes](https://kubernetes.io/), which is an open-source system for automating the management of containerized applications. In this project you will:
 * Test your project code using linting
@@ -23,7 +23,7 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 
 ---
 
-## Setup the Environment
+II Setup the Environment
 
 * Create a virtualenv with Python 3.7 and activate it. Refer to this link for help on specifying the Python version in the virtualenv. 
 ```bash
@@ -31,29 +31,33 @@ python3 -m pip install --user virtualenv
 # You should have Python 3.7 available in your host. 
 # Check the Python path using `which python3`
 # Use a command similar to this one:
-python3 -m virtualenv --python=<path-to-Python3.7> .devops
+python3 -m virtualenv .devops
 source .devops/bin/activate
 ```
 * Run `make install` to install the necessary dependencies
 
-### Running `app.py`
+III 3. Running application
 
-1. Standalone:  `python app.py`
-2. Run in Docker:  `./run_docker.sh`
-3. Run in Kubernetes:  `./run_kubernetes.sh`
+1. Standalone: 
+   Run payton `app.py`
 
-### Kubernetes Steps
+2. Run in Docker:
+   Run ./run_docker.sh to containerize the application to docker container.
+   Run ./make_prediction.sh to test the predict API on local.
 
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
-* Run via kubectl
+3. Run in Kubernetes:
+   Run ./upload_docker.sh to push the docker image into docker hub.
+   Run minikube start to start the local kubernetes cluster
+   Run kubectl config view to view the kubernetes default configurations and verify that the cluster is with a certificate-authority and server.
+   Run ./run_kubernetes.sh when the pod is in [Running] state
+   Run ./make_prediction.sh while calling ./run_kubernetes.sh
 
-#### Various code Files used for this project as below 
-•	app.py -   It’s an application file.
-•	run_docker.sh - Create docker image and start application.
-•	upload_docker.sh - Upload docker image to docker repo
-•	run_kubernetes.sh - Download docker image to Kubernetes and start application.
-•	make_prediction.sh- To make predictions. 
+4. Clean up kubernetes cluster
+   Run minikube delete
+   Run minikube stop
+
+
+
+
 
 
