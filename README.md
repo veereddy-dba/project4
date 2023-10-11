@@ -49,15 +49,15 @@ ii. Run in Docker:
 iii. Run in Kubernetes:
 
    Run ./upload_docker.sh to push the docker image into docker hub.
-   Run minikube start to start the local kubernetes cluster
+   Run minikube start to start the local kubernetes cluster.
    Run kubectl config view to view the kubernetes default configurations and verify that the cluster is with a certificate-authority and server.
-   Run ./run_kubernetes.sh when the pod is in [Running] state
-   Run ./make_prediction.sh while calling ./run_kubernetes.sh
+   Run ./run_kubernetes.sh when the pod is in [Running] state.
+   Run ./make_prediction.sh while calling ./run_kubernetes.sh.
 
 iv. Clean up kubernetes cluster:
    
-   Run minikube delete
-   Run minikube stop
+   Run minikube delete.
+   Run minikube stop.
 
 
 
