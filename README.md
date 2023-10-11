@@ -35,7 +35,7 @@ source .devops/bin/activate
 ```
 * Run `make install` to install the necessary dependencies
 
-III 3. Running application
+3. Running application
 
 1. Standalone: 
    Run payton `app.py`
